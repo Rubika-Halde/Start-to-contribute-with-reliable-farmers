@@ -1,0 +1,74 @@
+.Footer {
+  display: flex;
+  @include displayCenter(center, space-around);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  flex-wrap: wrap;
+  position: relative;
+  .footer_soft {
+    //   @include displayCenter(center, space-around);
+
+    .footer-heading {
+      font-size: 16px;
+      line-height: 26px;
+      color: $navy_color;
+      text-transform: uppercase;
+    }
+    .footer_para {
+      color: $grey_color;
+      font-size: 16px;
+      line-height: 26px;
+      margin-top: 15px;
+      max-width: 250px;
+    }
+    .footer_logos {
+      display: flex;
+      margin-top: 15px;
+      flex-wrap: wrap;
+      a {
+        color: $grey_color;
+        margin-right: 30px;
+      }
+    }
+  }
+
+//   .pages{
+//     position: absolute;
+//     left: 40%;
+//     bottom: 40%;
+
+//   }
+//   .Resources{
+//     position: absolute;
+//     left: 40%;
+//     bottom: 8%;
+//   }
+
+  .footer_company {
+    h3 {
+      color: $navy_color;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 8px;
+      color: $grey_color;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .Footer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 50px;
+    gap: 50px;
+    .footer_soft {
+      .footer_para {
+        max-width: 300px;
+      }
+    }
+   
+  }
+}

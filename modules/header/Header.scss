@@ -1,0 +1,118 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  .header_left {
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      color: $navy_color;
+    }
+  }
+  .header_middle {
+    display: flex;
+    position: relative;
+    gap: 30px;
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      color: $navy_color;
+    }
+  }
+  .header_right {
+    a {
+      text-decoration: none;
+      font-size: 12px;
+      padding: 8px 35px;
+      border-radius: 30px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      color: $navy_color;
+    }
+  }
+  .menu_wrapper {
+    display: none !important;
+    @include displayCenter(space-between, center);
+    gap: 20px;
+    .buy_now {
+      border: none;
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      color: $white_color;
+      background: linear-gradient(
+        to right,
+        rgb(64, 150, 185),
+        rgb(24, 24, 153)
+      );
+      display: inline-block;
+    }
+  }
+  .close_btn {
+    display: none;
+  }
+}
+.sidebar {
+  @include displayCenter(center, space-between);
+  flex-direction: column;
+  position: absolute;
+  display: block;
+  top: 90px;
+  left: 10px !important;
+  width: 100%;
+  height: 140px;
+  background-color: #ffff;
+  a {
+    text-decoration: none;
+    @include displayCenter(center, space-between);
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    margin-left: 40px;
+
+    color: $grey_color;
+  }
+}
+
+@media (max-width: $md) {
+  .header {
+    .header_left {
+      a{
+        margin-right: 200px;
+      }
+    }
+    .header_middle {
+      display: none;
+    }
+    .header_right {
+      display: none;
+    }
+    .menu_wrapper {
+      display: block !important;
+      display: flex !important;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    //   margin-left: 80px;
+      .menu_btn {
+        
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .header {
+    .header_middle {
+      display: none;
+      a {
+      }
+    }
+    .menu_wrapper {
+      display: block !important;
+      display: flex !important;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
+}

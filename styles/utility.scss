@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+$black_color: #000;
+$white_color: #ffff;
+$grey_color: #5c6b86;
+$dark_grey: #c0c5d2;
+$navy_color: #344767;
+$green_color: #82d616;
+$a_farmings: #3d4f6e;
+$text_color: #67748e;
+
+@mixin displayCenter($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+// @mixin for-phone-only($width) {
+//     @media (max-width: $width) { @content; }
+//   }

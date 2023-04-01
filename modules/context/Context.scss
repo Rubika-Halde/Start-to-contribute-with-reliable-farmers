@@ -1,0 +1,110 @@
+.Context {
+  display: flex;
+  gap: 40px;
+  padding: 30px 80px;
+  .Context-left {
+    .Context-img {
+      border-radius: 10px;
+      width: 900px;
+      height: 300px;
+    }
+  }
+  .Context-right {
+    h1 {
+      color: $navy_color;
+      font-size: 30px;
+      line-height: 41px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 10px;
+      color: $grey_color;
+    }
+    .context-btn {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      //   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 8px;
+      margin-top: 30px;
+      //
+      font-size: 12px;
+      .context-bottom {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        // flex-wrap: wrap;
+        gap: 20px;
+        padding: 10px 30px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        .context-bottom-icon {
+          background-image: linear-gradient(to right, #333962, #20243e);
+          padding: 10px 10px;
+          color: white;
+          font-size: 28px;
+          border-radius: 10px;
+        }
+        .context-icon-text {
+          p {
+            font-size: 14px;
+          }
+          .h3 {
+            color: $navy_color !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .Context {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: $sm) {
+  .Context {
+    @include displayCenter(center, center);
+    padding-right: 0;
+    padding-left: 0;
+    .Context-left {
+      .Context-img {
+        width: 400px;
+        height: 300px;
+      }
+    }
+    .Context-right {
+      @include displayCenter(center, center);
+      flex-direction: column;
+      h1 {
+        font-size: 24px;
+        line-height: 31px;
+        max-width: 400px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 26px;
+        max-width: 400px;
+        margin-bottom: 0;
+      }
+      .context-btn{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 10px 20px;
+        justify-content: start;
+        .context-bottom{
+            padding: 20px 80px;
+        }
+      }
+    }
+  }
+}
